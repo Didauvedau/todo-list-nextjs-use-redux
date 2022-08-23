@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid'
-import { PostType } from '../../../store/features/data'
-import { addPost, removePost } from '../../../store/features/slice'
+import { PostType } from '../../../redux/store/features/data'
+import { addPost, removePost } from '../../../redux/store/features/slice'
 
 const PostComponent = () => {
   const postList: PostType[] = useSelector((state: any) => state.posts.value)
@@ -44,7 +44,7 @@ const PostComponent = () => {
     inputNameRef.current.focus()
   }, [])
 
-  console.log(postList)
+  // console.log(postList)
   return (
     <div className="container">
       <h1>Post Page</h1>

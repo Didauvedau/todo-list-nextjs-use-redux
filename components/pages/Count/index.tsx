@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { amountAction, decrement, increment, resetCount } from '../../../store/Count/slice'
+import { amountAction, decrement, increment, resetCount } from '../../../redux/store/Count/slice'
 
 const CountComponent: React.FC = () => {
   const count = useSelector((state: any) => state.counter.value)
@@ -8,8 +8,6 @@ const CountComponent: React.FC = () => {
   const dispatch = useDispatch()
 
   const [amount, setAmount] = useState<number>(0)
-
-  console.log(count)
 
   return (
     <div className="container">
