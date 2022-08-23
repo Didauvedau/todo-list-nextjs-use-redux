@@ -1,3 +1,8 @@
+::selection {
+  background-color: violet;
+  color: aliceblue;
+}
+
 html,
 body {
   padding: 0;
@@ -13,6 +18,7 @@ a {
 
 * {
   box-sizing: border-box;
+  text-transform: capitalize;
 }
 
 ul {
@@ -23,6 +29,23 @@ ul {
   background-color: cornsilk;
 }
 
+.navbar{
+  background-color: antiquewhite;
+}
+
+.navbar .nav-menu{
+  font-size: 1.2rem;
+  transition: all .4s linear;
+  padding: 5px;
+}
+
+.navbar .nav-menu:hover{
+  font-size: 1rem;
+  color: aqua;
+  background-color: darkslateblue;
+  border-radius: 20px;
+}
+
 input[type='text'] {
   width: 70%;
 }
@@ -31,6 +54,59 @@ input[type='text'] {
   background-color: bisque;
 }
 
+@import '~antd/dist/antd.css';
+
+.ant-select-multiple .ant-select-selection-item {
+  height: 27px;
+}
+
+.ant-image {
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2px solid goldenrod;
+  box-shadow: 2px 3px 8px rgb(226, 219, 219);
+}
+
+/* Count component */
+.buttonCount {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.buttonCount input {
+  padding: 0 10px;
+}
+
+.buttonCount button {
+  padding: 5px 10px;
+  background-color: aquamarine;
+  border-radius: 10px;
+}
+
+/* Post */
+.post {
+  /* style */
+}
+
+.post ul {
+  list-style: none;
+  border: 1px solid black;
+  background-color: antiquewhite;
+}
+
+.addPost {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
@@ -38,5 +114,10 @@ input[type='text'] {
   body {
     color: white;
     background: black;
+  }
+}
+@media (min-width:768px){
+  .todo-list{
+    width: 500px !important;
   }
 }
